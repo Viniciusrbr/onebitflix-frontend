@@ -1,7 +1,6 @@
 @import "./colors.module.scss";
 
-.header,
-.footer {
+.header {
     background-color: black;
 }
 
@@ -16,7 +15,6 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-
     width: 80%;
     margin: 20px auto;
     text-transform: uppercase;
@@ -25,13 +23,11 @@
 .nameAbbreviation {
     font-size: 40px;
     font-weight: bold;
-
     min-height: 70px;
     min-width: 70px;
-    border-radius: 50%;
-
     background-color: white;
     color: black;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,7 +53,10 @@
     color: $lightGray;
 }
 
-// Form
+.label {
+    font-size: 14px;
+    font-weight: bold;
+}
 
 .inputFlexDiv {
     display: flex;
@@ -66,15 +65,9 @@
     gap: 50px;
 }
 
-.label {
-    font-size: 14px;
-    font-weight: bold;
-}
-
 .inputFlex {
-    text-transform: uppercase;
-
     width: 250px;
+    text-transform: uppercase;
     background-color: transparent;
     border: 1px solid $darkGray;
     color: white;
@@ -112,6 +105,8 @@
     font-weight: bold;
     font-size: 15px;
     padding: 6px 20px;
+    display: block;
+    margin: 10px auto;
 
     &:hover {
         border-color: $darkRed;
@@ -119,8 +114,6 @@
         color: $lightGray;
     }
 }
-
-// botões na lateral
 
 .title {
     font-size: 45px;
@@ -131,20 +124,30 @@
 .renderForm {
     display: block;
     width: 200px;
-
+    border: 1px solid $darkGray;
     background-color: transparent;
     font-weight: bold;
-
-    border: 1px solid $darkGray;
     margin: 0 auto;
-    padding: 15px 0px;
-    color: white;
+    padding: 14px 0px;
 
     &:hover {
-        border-color: $lightRed;
         background-color: transparent;
-        color: $lightGray;
+        color: $lightRed;
     }
+
+    &:active {
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    &:focus {
+        background-color: transparent;
+        box-shadow: none;
+    }
+}
+
+.footer {
+    background-color: black;
 }
 
 @media (max-width: 991px) {
@@ -176,8 +179,8 @@
 
     .nameAbbreviation {
         font-size: 30px;
-        min-width: 60px;
         min-height: 60px;
+        min-width: 60px;
     }
 
     .userName {
