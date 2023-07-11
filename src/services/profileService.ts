@@ -18,29 +18,29 @@ const profileService = {
         const token = sessionStorage.getItem("onebitflix-token");
 
         const res = await api.get("/users/current", {
-                headers: {
-                    Authorization: `Bearer ${token}`,
-                },
-            }) .catch((error) => {
-                return error.response;
-            });
+            headers: {
+                Authorization: `Bearer ${token}`,
+            },
+        }).catch((error) => {
+            return error.response;
+        });
 
         return res.data;
     },
     userUpdate: async (params: UserParams) => {
         const token = sessionStorage.getItem("onebitflix-token");
 
-        const res = await api .put("/users/current", params, {
-                headers: {
-                    Authorization: `Bearer ${token}`,
-                },
-            }).catch((error) => {
-                if (error.response.status === 400 || error.response.status === 401) {
-                    return error.response;
-                }
+        const res = await api.put("/users/current", params, {
+            headers: {
+                Authorization: `Bearer ${token}`,
+            },
+        }).catch((error) => {
+            if (error.response.status === 400 || error.response.status === 401) {
+                return error.response;
+            }
 
-                return error;
-            });
+            return error;
+        });
 
         return res.status;
     },
@@ -48,16 +48,16 @@ const profileService = {
         const token = sessionStorage.getItem("onebitflix-token");
 
         const res = await api.put("/users/current/password", params, {
-                headers: {
-                    Authorization: `Bearer ${token}`,
-                },
-            }).catch((error) => {
-                if (error.response.status === 400 || error.response.status === 401) {
-                    return error.response;
-                }
+            headers: {
+                Authorization: `Bearer ${token}`,
+            },
+        }).catch((error) => {
+            if (error.response.status === 400 || error.response.status === 401) {
+                return error.response;
+            }
 
-                return error;
-            });
+            return error;
+        });
 
         return res.status;
     },
