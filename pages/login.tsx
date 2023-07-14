@@ -6,7 +6,7 @@ import Footer from "@/src/components/common/footer";
 import { useRouter } from "next/router";
 import { FormEvent, useEffect, useState } from "react";
 import ToastComponent from "@/src/components/common/toast";
-import authServise from "@/src/services/authServise";
+import authServise from "@/src/services/authService";
 
 const Login = function () {
     const router = useRouter();

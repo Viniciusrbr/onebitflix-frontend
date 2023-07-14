@@ -4,7 +4,7 @@ import Head from 'next/head';
 import { Container, Form, FormGroup, Label, Button, Input } from 'reactstrap';
 import Footer from '@/src/components/common/footer';
 import { FormEvent, useEffect, useState } from 'react';
-import authServise from '@/src/services/authServise';
+import authServise from '@/src/services/authService';
 import { useRouter } from 'next/router';
 import ToastComponent from '@/src/components/common/toast';
 
