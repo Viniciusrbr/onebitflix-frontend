@@ -52,7 +52,7 @@
 }
 
 .player {
-    width: 100% !important;
+    max-width: 100%;
 }
 
 @media (max-width: 425px) {
@@ -63,6 +63,7 @@
     }
 
     .player {
+        max-width: 100%;
         margin-top: -60px;
     }
 }
