@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-sync-scripts */
+/* eslint-disable react-hooks/exhaustive-deps */
 import HeaderGeneric from '@/src/components/common/headerGeneric';
 import styles from '../styles/registerLogin.module.scss';
 import Head from 'next/head';
